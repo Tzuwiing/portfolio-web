@@ -104,8 +104,7 @@ personal_branding/
 *Junior Developer — Web & Mobile Enthusiast*
 
 - **Portfolio:** [Live Demo Link](#)
-- **GitHub:** [@your-github-username](#)
-- **LinkedIn:** [Jusuf Fathan Nuradly](#)
+- **GitHub:** [tzuwiing](https://github.com/Tzuwiing)
 
 ---
 
