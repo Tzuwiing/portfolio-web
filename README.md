@@ -103,7 +103,7 @@ personal_branding/
 **Jusuf Fathan Nuradly**  
 *Junior Developer — Web & Mobile Enthusiast*
 
-- **Portfolio:** [Live Demo Link](#)
+- **Portfolio:** [Live Demo Link](https://jusuffathan.vercel.app/)
 - **GitHub:** [tzuwiing](https://github.com/Tzuwiing)
 
 ---
