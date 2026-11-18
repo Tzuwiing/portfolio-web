@@ -1,8 +1,8 @@
-import { useEffect, useId, useRef } from 'react';
-import { clamp, hasLink, hex } from '../data/portfolioData.js';
-import { useInView } from '../hooks/useInView.js';
-import { useTilt } from '../hooks/useTilt.js';
-import { projectRenderer } from '../three/projectRenderer.js';
+import { useEffect, useId, useRef } from "react";
+import { clamp, hasLink, hex } from "../data/portfolioData.js";
+import { useInView } from "../hooks/useInView.js";
+import { useTilt } from "../hooks/useTilt.js";
+import { projectRenderer } from "../three/projectRenderer.js";
 
 export default function ProjectCard({ project, lang, reduceMotion }) {
   const id = useId();
@@ -48,8 +48,16 @@ export default function ProjectCard({ project, lang, reduceMotion }) {
     const canvas = canvasRef.current;
     if (!canvas || !entryRef.current) return;
     const r = canvas.getBoundingClientRect();
-    entryRef.current.mx = clamp(((e.clientX - r.left) / r.width) * 2 - 1, -1, 1);
-    entryRef.current.my = clamp(((e.clientY - r.top) / r.height) * 2 - 1, -1, 1);
+    entryRef.current.mx = clamp(
+      ((e.clientX - r.left) / r.width) * 2 - 1,
+      -1,
+      1,
+    );
+    entryRef.current.my = clamp(
+      ((e.clientY - r.top) / r.height) * 2 - 1,
+      -1,
+      1,
+    );
   };
 
   const setRefs = (node) => {
@@ -60,9 +68,9 @@ export default function ProjectCard({ project, lang, reduceMotion }) {
   return (
     <article
       ref={setRefs}
-      className={`pcard glass rev${inView ? ' in' : ''}`}
+      className={`pcard glass rev${inView ? " in" : ""}`}
       data-plat={project.platform}
-      style={{ '--c': hex(project.color) }}
+      style={{ "--c": hex(project.color) }}
       onPointerEnter={handlePointerEnter}
       onPointerLeave={handlePointerLeave}
       onPointerMove={handlePointerMove}
@@ -75,7 +83,7 @@ export default function ProjectCard({ project, lang, reduceMotion }) {
       <div className="pbody">
         <h3>{project.title}</h3>
         <p className="psub">{project.sub}</p>
-        <p className="pdesc">{lang === 'en' ? project.en : project.id}</p>
+        <p className="pdesc">{lang === "en" ? project.en : project.id}</p>
         <ul className="chips">
           {project.tech.map((t) => (
             <li key={t} className="chip">
@@ -85,18 +93,28 @@ export default function ProjectCard({ project, lang, reduceMotion }) {
         </ul>
         <div className="pact">
           {hasLink(project.demo) && (
-            <a className="btn primary sm" href={project.demo} target="_blank" rel="noopener noreferrer">
-              Live demo &nearr;
+            <a
+              className="btn primary sm"
+              href={project.demo}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Live demo ↗
             </a>
           )}
           {hasLink(project.repo) && (
-            <a className="btn sm" href={project.repo} target="_blank" rel="noopener noreferrer">
-              GitHub &nearr;
+            <a
+              className="btn sm"
+              href={project.repo}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub ↗
             </a>
           )}
           {!hasLink(project.demo) && (
             <span className="nodemo">
-              {lang === 'en' ? 'No live demo yet' : 'Belum ada demo online'}
+              {lang === "en" ? "No live demo yet" : "Belum ada demo online"}
             </span>
           )}
         </div>
