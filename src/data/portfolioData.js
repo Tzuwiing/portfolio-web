@@ -105,9 +105,55 @@ export const THEMES = [
   ['Rose', 0xfb7185],
 ];
 
+export const PROCESS_STEPS = [
+  {
+    num: 1,
+    titleId: 'UI/UX Slicing',
+    titleEn: 'UI/UX Slicing',
+    subId: 'Konversi Figma yang presisi',
+    subEn: 'Pixel-perfect Figma conversion',
+    descId: 'Saya pelajari setiap frame di Figma dan membangunnya ulang dengan tepat: jarak, skala huruf, warna, dan aset.',
+    descEn: 'I study every frame in Figma and rebuild it precisely: spacing, type scale, colors and assets.',
+  },
+  {
+    num: 2,
+    titleId: 'Arsitektur',
+    titleEn: 'Architecture',
+    subId: 'Kode React & Flutter yang modular',
+    subEn: 'Modular React & Flutter code',
+    descId: 'Komponen yang bisa dipakai ulang, struktur folder yang rapi, dan state yang siap tumbuh, sehingga fitur baru mudah dipasang.',
+    descEn: 'Reusable components, a clean folder structure and state that scales, so features snap together.',
+  },
+  {
+    num: 3,
+    titleId: 'Integrasi API',
+    titleEn: 'API Integration',
+    subId: 'REST API & database lokal',
+    subEn: 'REST API & local database',
+    descId: 'Mengambil, menyimpan, dan menyimpan ulang data, lengkap dengan status loading, penanganan error, dan penyimpanan offline.',
+    descEn: 'Fetching, caching and persisting data, with proper loading states, error handling and offline storage.',
+  },
+  {
+    num: 4,
+    titleId: 'Poles & Rilis',
+    titleEn: 'Polish & Ship',
+    subId: 'Responsif & teroptimasi',
+    subEn: 'Responsive & optimized',
+    descId: 'Setiap ukuran layar diuji, performa disetel, dan kasus tepi ditangani sebelum rilis.',
+    descEn: 'Every breakpoint tested, performance tuned and edge cases handled before launch.',
+  },
+];
+
+export const NAV_ITEMS = [
+  { id: 'home', labelId: 'Beranda', labelEn: 'Home' },
+  { id: 'about', labelId: 'Tentang', labelEn: 'About' },
+  { id: 'process', labelId: 'Proses', labelEn: 'Process' },
+  { id: 'projects', labelId: 'Proyek', labelEn: 'Work' },
+  { id: 'contact', labelId: 'Kontak', labelEn: 'Contact' },
+];
+
 export const EMAIL = 'jusuffathan1909@gmail.com';
 
 export const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
 export const hex = (n) => '#' + ('000000' + n.toString(16)).slice(-6);
 export const hasLink = (u) => typeof u === 'string' && u.trim() !== '' && u.trim() !== '#';
-export const T = (id, en) => `<span class="t-id">${id}</span><span class="t-en">${en}</span>`;

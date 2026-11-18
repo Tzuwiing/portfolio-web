@@ -1,4 +1,6 @@
-export function glowTex(THREE, color) {
+import * as THREE from 'three';
+
+export function glowTex(color) {
   const c = document.createElement('canvas');
   c.width = c.height = 128;
   const g = c.getContext('2d');
@@ -13,10 +15,10 @@ export function glowTex(THREE, color) {
   return new THREE.CanvasTexture(c);
 }
 
-export function glowSprite(THREE, color, size, op) {
+export function glowSprite(color, size, op) {
   const s = new THREE.Sprite(
     new THREE.SpriteMaterial({
-      map: glowTex(THREE, color),
+      map: glowTex(color),
       blending: THREE.AdditiveBlending,
       depthWrite: false,
       transparent: true,
@@ -27,7 +29,7 @@ export function glowSprite(THREE, color, size, op) {
   return s;
 }
 
-export function buildProjectBody(THREE, p) {
+export function buildProjectBody(p) {
   const g = new THREE.Group();
   const col = p.color;
   const mat = (e) =>
