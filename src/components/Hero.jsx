@@ -28,7 +28,7 @@ export default function Hero({
           <span className="badge glass">
             <i className="pulse" />
             {lang === "en"
-              ? "Converting Caffein into Code Since 2020"
+              ? "Turning Caffeine into Code Since 2020"
               : "Mengubah Kafein menjadi Kode Sejak 2020"}
           </span>
 
